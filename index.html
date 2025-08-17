@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website kinx rafly</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Website pertama saya karna gabut & nyobaan">
+    <meta name="keywords" content="website, acode, github pages, belajar coding">
+    <meta name="author" content="Rafli Rizki">
+
+    <!-- CSS Langsung di HTML -->
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #007bff;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #007bff, #00c6ff);
+            color: white;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        .hero button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: white;
+            color: #007bff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .hero button:hover {
+            background: #f1f1f1;
+        }
+
+        /* About */
+        .about {
+            padding: 50px;
+            text-align: center;
+        }
+
+        /* Contact */
+        .contact {
+            background: #f1f1f1;
+            padding: 50px;
+            text-align: center;
+        }
+        .contact form {
+            max-width: 400px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .contact input, .contact textarea, .contact button {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+        .contact button {
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        .contact button:hover {
+            background: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            background: #007bff;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h2 class="logo">MyWeb</h2>
+        <ul>
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Selamat Datang di Website Rafly 🚀</h1>
+        <p>Website ini dibuat si rafly ku hp pas gabut</p>
+        <button onclick="showMessage()">Klik ieu</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>Tentang kinx rafly</h2>
+        <p>
+            saya teh gabut nyobaan doang bikin inihhh & asli inimah nyobaan doang alias tinggal tep tep
+        </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Hubungi urang</h2>
+        <form onsubmit="sendMessage(event)">
+            <input type="text" id="name" placeholder="Nama maneh" required>
+            <input type="email" id="email" placeholder="Email maneh" required>
+            <textarea id="message" placeholder="Pesan maneh" required></textarea>
+            <button type="submit">Kirim</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Dibuat ku si rafly🗿👍</p>
+    </footer>
+
+    <!-- JavaScript Langsung di HTML -->
+    <script>
+        function showMessage() {
+            alert("Mantap! Website ini dibuat di HP pakai Acode 🎉");
+        }
+
+        function sendMessage(event) {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            if (name && email && message) {
+                alert(`Terima kasih ${name}! Pesan kamu sudah terkirim.`);
+            } else {
+                alert("isi hela kabehh sebelum di kirim teh .");
+            }
+        }
+    </script>
+</body>
+</html>
